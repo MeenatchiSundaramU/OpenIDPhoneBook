@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>OPENID</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+   <servlet>
+        <servlet-name>ClientController</servlet-name>
+        <servlet-class>ClientController.PhoneBook</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClientController</servlet-name>
+        <url-pattern>/msPhoneBook/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>msOpenIDController</servlet-name>
+        <servlet-class>OpenIDController.msOIDC</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>msOpenIDController</servlet-name>
+        <url-pattern>/msOIDC/*</url-pattern>
+    </servlet-mapping>
+</web-app>
